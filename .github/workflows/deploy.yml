@@ -41,4 +41,4 @@ jobs:
           # If you changed that, update it here too.
           publish_dir: ./dist
           # Change CNAME
-          cname: arks.moe
+          cname: ARKS.MOE
