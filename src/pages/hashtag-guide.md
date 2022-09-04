@@ -50,6 +50,10 @@ Contact me through Twitter ([@jojobii\_](https://twitter.com/jojobii_)) if I sho
 
 - Hashtags for screenshots (_SS_).
 
+[#メンテの日じゃないけどssを貼る](https://twitter.com/hashtag/%E3%83%A1%E3%83%B3%E3%83%86%E3%81%AE%E6%97%A5%E3%81%98%E3%82%83%E3%81%AA%E3%81%84%E3%81%91%E3%81%A9ss%E3%82%92%E8%B2%BC%E3%82%8B)
+
+- "It's not maintenance day, but I'll post an _SS_."
+
 [#MaintDaySS](https://twitter.com/hashtag/MaintDaySS)
 /
 [#メンテの日なので ss を貼る](https://twitter.com/hashtag/%E3%83%A1%E3%83%B3%E3%83%86%E3%81%AE%E6%97%A5%E3%81%AA%E3%81%AE%E3%81%A7ss%E3%82%92%E8%B2%BC%E3%82%8B)
