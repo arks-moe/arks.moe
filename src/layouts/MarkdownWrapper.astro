@@ -1,9 +1,9 @@
 ---
 import MainLayout from '../layouts/MainLayout.astro';
-const { title } = Astro.props.content;
+const { title, description } = Astro.props.content;
 ---
 
-<MainLayout title={title}>
+<MainLayout title={title} opengraph={{ description }}>
   <div class="prose mx-auto p-4 pb-16">
     <slot />
   </div>

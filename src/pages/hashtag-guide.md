@@ -1,6 +1,7 @@
 ---
 layout: ../layouts/MarkdownWrapper.astro
 title: PSO2 Twitter Hashtags
+description: A reference of hashtags used within PSO2/PSO2:NGS Twitter community.
 ---
 
 # PSO2 Twitter Hashtag Guide
