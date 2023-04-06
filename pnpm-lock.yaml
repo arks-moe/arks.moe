@@ -3,19 +3,27 @@ lockfileVersion: 5.4
 specifiers:
   '@astrojs/tailwind': ^3.1.1
   '@tailwindcss/typography': ^0.5.9
+  '@types/marked': ^4.0.8
+  '@types/node': ^18.15.11
   astro: ^2.2.0
   autoprefixer: ^10.4.14
   daisyui: ^2.51.5
+  marked: ^4.3.0
   postcss: ^8.4.21
   tailwindcss: ^3.3.1
+  yaml: ^2.2.1
 
 dependencies:
+  '@types/marked': 4.0.8
   daisyui: 2.51.5_j7yt3jd32cwenjqavrrga47yr4
+  marked: 4.3.0
+  yaml: 2.2.1
 
 devDependencies:
   '@astrojs/tailwind': 3.1.1_nfbnt7ricougkvppdwsf5maxzu
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.3.1
-  astro: 2.2.0
+  '@types/node': 18.15.11
+  astro: 2.2.0_@types+node@18.15.11
   autoprefixer: 10.4.14_postcss@8.4.21
   postcss: 8.4.21
   tailwindcss: 3.3.1_postcss@8.4.21
@@ -62,7 +70,7 @@ packages:
       astro: ^2.2.0
     dependencies:
       '@astrojs/prism': 2.1.1
-      astro: 2.2.0
+      astro: 2.2.0_@types+node@18.15.11
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.2
       rehype-raw: 6.1.1
@@ -93,7 +101,7 @@ packages:
       tailwindcss: ^3.0.24
     dependencies:
       '@proload/core': 0.3.3
-      astro: 2.2.0
+      astro: 2.2.0_@types+node@18.15.11
       autoprefixer: 10.4.14_postcss@8.4.21
       postcss: 8.4.21
       postcss-load-config: 4.0.1_postcss@8.4.21
@@ -709,6 +717,10 @@ packages:
     resolution: {integrity: sha512-sqm9g7mHlPY/43fcSNrCYfOeX9zkTTK+euO5E6+CVijSMm5tTjkVdwdqRkY3ljjIAf8679vps5jKUoJBCLsMDA==}
     dev: true
 
+  /@types/marked/4.0.8:
+    resolution: {integrity: sha512-HVNzMT5QlWCOdeuBsgXP8EZzKUf0+AXzN+sLmjvaB3ZlLqO+e4u0uXrdw9ub69wBKFs+c6/pA4r9sy6cCDvImw==}
+    dev: false
+
   /@types/mdast/3.0.11:
     resolution: {integrity: sha512-Y/uImid8aAwrEA24/1tcRZwpxX3pIFTSilcNDKSPn+Y2iDywSEachzRuvgAYYLR3wpGXAsMbv5lvKLDZLeYPAw==}
     dependencies:
@@ -723,6 +735,10 @@ packages:
     resolution: {integrity: sha512-3TGCfOcy8R8mMQ4CNSNOe3PG66HttvjcLzCoOpvXvDtfWOTi+uT/rxeOKm/qEwbM4SNe1O/PjdiBK2YcTjU4OQ==}
     dependencies:
       '@types/unist': 2.0.6
+    dev: true
+
+  /@types/node/18.15.11:
+    resolution: {integrity: sha512-E5Kwq2n4SbMzQOn6wnmBjuK9ouqlURrcZDVfbo9ftDDTFt3nk7ZKK4GMOzoYgnpQJKcxwQw+lGaBvvlMo0qN/Q==}
     dev: true
 
   /@types/parse5/6.0.3:
@@ -819,7 +835,7 @@ packages:
     resolution: {integrity: sha512-I1jXZMjAgCMmxT4qxXfPXa6SthSoE8h6gkSI9BGGNv8mP8G/v0blc+qFnZu6K42vTOiuME596QaLO0TP3Lk0xg==}
     dev: true
 
-  /astro/2.2.0:
+  /astro/2.2.0_@types+node@18.15.11:
     resolution: {integrity: sha512-7ggQHIyWadnjRY+Jo7nZmYF5xspeAWCjQV+fPkad7u86hj0qjhU+8WvCZI1q7cvJo9o0DMzaI+3vH1voIK7Czg==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
@@ -878,7 +894,7 @@ packages:
       typescript: 5.0.3
       unist-util-visit: 4.1.2
       vfile: 5.3.7
-      vite: 4.2.1
+      vite: 4.2.1_@types+node@18.15.11
       vitefu: 0.2.4_vite@4.2.1
       yargs-parser: 21.1.1
       zod: 3.21.4
@@ -1817,6 +1833,12 @@ packages:
   /markdown-table/3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
     dev: true
+
+  /marked/4.3.0:
+    resolution: {integrity: sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A==}
+    engines: {node: '>= 12'}
+    hasBin: true
+    dev: false
 
   /mdast-util-definitions/5.1.2:
     resolution: {integrity: sha512-8SVPMuHqlPME/z3gqVwWY4zVXn8lqKv/pAhC57FuJ40ImXyBpmO5ukh98zB2v7Blql2FiHjHv9LVztSIqjY+MA==}
@@ -3188,7 +3210,7 @@ packages:
       vfile-message: 3.1.4
     dev: true
 
-  /vite/4.2.1:
+  /vite/4.2.1_@types+node@18.15.11:
     resolution: {integrity: sha512-7MKhqdy0ISo4wnvwtqZkjke6XN4taqQ2TBaTccLIpOKv7Vp2h4Y+NpmWCnGDeSvvn45KxvWgGyb0MkHvY1vgbg==}
     engines: {node: ^14.18.0 || >=16.0.0}
     hasBin: true
@@ -3213,6 +3235,7 @@ packages:
       terser:
         optional: true
     dependencies:
+      '@types/node': 18.15.11
       esbuild: 0.17.15
       postcss: 8.4.21
       resolve: 1.22.2
@@ -3229,7 +3252,7 @@ packages:
       vite:
         optional: true
     dependencies:
-      vite: 4.2.1
+      vite: 4.2.1_@types+node@18.15.11
     dev: true
 
   /vscode-css-languageservice/6.2.4:
@@ -3358,7 +3381,6 @@ packages:
   /yaml/2.2.1:
     resolution: {integrity: sha512-e0WHiYql7+9wr4cWMx3TVQrNwejKaEe7/rHNmQmqRjazfOP5W8PB6Jpebb5o6fIapbz9o9+2ipcaTM2ZwDI6lw==}
     engines: {node: '>= 14'}
-    dev: true
 
   /yargs-parser/21.1.1:
     resolution: {integrity: sha512-tVpsJW7DdjecAiFpbIB1e3qxIQsE6NoPc5/eTdrbbIC4h0LVsWhnoa3g+m2HclBIujHzsxZ4VJVA+GUuc2/LBw==}
