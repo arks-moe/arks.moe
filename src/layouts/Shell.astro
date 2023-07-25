@@ -1,32 +1,33 @@
 ---
-const { title, description, image } = Astro.props.frontmatter || {
-		title: 'arks.moe',
-		description: "a collection of resources for PSO2:NGS. not affiliated with SEGA.",
-		image: 'https://arks.moe/assets/og-image.png'
-	};
+const title = Astro.props.frontmatter.title || "arks.moe";
+const description =
+  Astro.props.frontmatter.description ||
+  "a collection of resources for PSO2:NGS. not affiliated with SEGA.";
+const image =
+  Astro.props.frontmatter.image || "https://arks.moe/assets/og-image.png";
 ---
 
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
+  <head>
+    <meta charset="utf-8" />
 
-		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-		<link rel="manifest" href="/site.webmanifest">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="manifest" href="/site.webmanifest" />
 
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
 
-		<title>{title}</title>
-		<meta name="description" content={description} />
+    <title>{title}</title>
+    <meta name="description" content={description} />
 
-		<meta property="og:title" content={title} />
-		<meta property="og:description" content={description} />
-		<meta property="og:url" content="https://arks.moe/" />
-		<meta property="og:image" content={image} />
-	</head>
-	<body>
-		<slot />
-	</body>
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content="https://arks.moe/" />
+    <meta property="og:image" content={image} />
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>
