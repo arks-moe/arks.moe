@@ -1,36 +1,83 @@
 ---
-import Shell from '../layouts/Shell.astro';
-import {links} from '../data';
+import Shell from "../layouts/Shell.astro";
+import { links } from "../data";
+import type { Link } from "../data";
 ---
 
-<Shell frontmatter={{ title: 'jojobii', description: `jojobii's home page. links to my social media and everything else.` }}>
-	<div class="text-center font-light my-16">
-		<h1 class="font-black text-7xl mb-4">jojobii</h1>
-		<p class="text-2xl mb-4">hiii :3</p>
-		<p class="mb-8 italic">here's my internet presence...</p>
-		<div class="max-w-3xl mx-auto mb-16">
-			<h2 class="font-bold text-2xl mb-4">Links</h2>
-			<ul class="flex flex-col gap-2">
-				{links.map(category => (
+<style lang="scss">
+  :root {
+    @apply font-light;
+  }
+</style>
+
+<Shell
+  frontmatter={{
+    title: "arks.moe",
+    description: `a collection of resources for PSO2:NGS. not affiliated with SEGA.`,
+  }}
+>
+  <div class="my-12 max-w-2xl mx-auto">
+    <div class="text-center font-light my-12">
+      <h1 class="font-black text-6xl mb-6">arks.moe</h1>
+      <p>a collection of resources for PSO2:NGS</p>
+      <p>intended for global players</p>
+      <sub>not affiliated with SEGA</sub>
+    </div>
+    <ul class="flex flex-col gap-8 max-w-2xl mx-auto mb-12">
+      {
+        links.map((category) => (
           <li>
-            <h3>{category.header}</h3>
-            <ul>
-              {category.links.map((link) => (<li>
-                  <a class="" href={link.url}>{link.label}</a>
-                </li>))}
+            <h3 class="font-bold text-2xl mb-4">{category.header}</h3>
+            <ul class="flex flex-col gap-4">
+              {category.links.map((link) => (
+                <li class="bg-neutral hover:bg-neutral-focus text-neutral-content transition-all duration-100 hover:scale-[99%]">
+                  <a class="block p-4" href={link.url} target="_blank">
+                    <div class="">{link.label}</div>
+                    <div class="text-sm font-extralight">{link.sub}</div>
+                  </a>
+                </li>
+              ))}
             </ul>
           </li>
-				))}
-			</ul>
-		</div>
-		<img
-			id="chibi"
-			class="max-w-sm mx-auto hover:cursor-pointer"
-			src="/assets/jojobii.png"
-			alt="jojobii's chibi"
-		/>
-	</div>
-  <ul>
-    
-  </ul>
+        ))
+      }
+    </ul>
+
+    <hr class="opacity-25 my-16 w-3/4 mx-auto" />
+
+    <div class="mb-16">
+      <h3 class="font-bold text-2xl mb-4"><i>arks.moe</i> archive</h3>
+      <ul class="flex flex-col gap-4">
+        {
+          (
+            [
+              {
+                label: "NGS Lore Timeline",
+                sub: "by @RollChroll",
+                url: "/ngs-timeline",
+              },
+							{
+								label: 'PSO2 Hashtag Guide',
+								sub: 'PSO2 Twitter Hashtag Reference',
+								url: '/hashtag-guide'
+							}
+            ] as Link[]
+          ).map((link) => (
+            <li class="bg-neutral hover:bg-neutral-focus text-neutral-content transition-all duration-100 hover:scale-[99%]">
+              <a class="block p-4" href={link.url}>
+                <div class="">{link.label}</div>
+                <div class="text-sm font-extralight">{link.sub}</div>
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </div>
+
+    <div class="text-center">
+      <a href="https://jojobii.moe" class="font-extralight link-hover"
+        >by jojobii</a
+      >
+    </div>
+  </div>
 </Shell>

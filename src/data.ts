@@ -1,6 +1,6 @@
-interface Link {
+export interface Link {
   label: string;
-  sub?: string;
+  sub: string;
   url: string;
 }
 
@@ -9,7 +9,7 @@ export const links: {
   links: Link[];
 }[] = [
   {
-    header: "Official Sites",
+    header: "official sites",
     links: [
       {
         label: "PSO2:NGS Official Player Site",
@@ -30,7 +30,7 @@ export const links: {
     ],
   },
   {
-    header: "Guides",
+    header: "guides",
     links: [
       {
         label: "PSO2:NGS Arks-Visiphone Wiki",
@@ -50,7 +50,7 @@ export const links: {
     ],
   },
   {
-    header: "Misc",
+    header: "misc",
     links: [
       {
         label: "Arks-Layer Global",

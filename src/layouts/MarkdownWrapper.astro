@@ -1,0 +1,10 @@
+---
+import Shell from '../layouts/Shell.astro';
+const { title, description } = Astro.props.content;
+---
+
+<Shell frontmatter={{title, description}}>
+  <div class="prose mx-auto p-4 pb-16">
+    <slot />
+  </div>
+</Shell>
