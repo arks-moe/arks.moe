@@ -1,0 +1,36 @@
+---
+import Shell from '../layouts/Shell.astro';
+import {links} from '../data';
+---
+
+<Shell frontmatter={{ title: 'jojobii', description: `jojobii's home page. links to my social media and everything else.` }}>
+	<div class="text-center font-light my-16">
+		<h1 class="font-black text-7xl mb-4">jojobii</h1>
+		<p class="text-2xl mb-4">hiii :3</p>
+		<p class="mb-8 italic">here's my internet presence...</p>
+		<div class="max-w-3xl mx-auto mb-16">
+			<h2 class="font-bold text-2xl mb-4">Links</h2>
+			<ul class="flex flex-col gap-2">
+				{links.map(category => (
+          <li>
+            <h3>{category.header}</h3>
+            <ul>
+              {category.links.map((link) => (<li>
+                  <a class="" href={link.url}>{link.label}</a>
+                </li>))}
+            </ul>
+          </li>
+				))}
+			</ul>
+		</div>
+		<img
+			id="chibi"
+			class="max-w-sm mx-auto hover:cursor-pointer"
+			src="/assets/jojobii.png"
+			alt="jojobii's chibi"
+		/>
+	</div>
+  <ul>
+    
+  </ul>
+</Shell>
