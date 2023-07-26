@@ -4,7 +4,7 @@ const description =
   Astro.props.frontmatter.description ||
   "a collection of resources for PSO2:NGS. not affiliated with SEGA.";
 const image =
-  Astro.props.frontmatter.image || "https://arks.moe/assets/og-image.png";
+  Astro.props.frontmatter.image || "https://arks.moe/embed.png";
 ---
 
 <html lang="en">
@@ -26,6 +26,7 @@ const image =
     <meta property="og:description" content={description} />
     <meta property="og:url" content="https://arks.moe/" />
     <meta property="og:image" content={image} />
+    <meta name="twitter:card" content="summary" />
   </head>
   <body>
     <slot />
