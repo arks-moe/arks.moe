@@ -1,0 +1,31 @@
+---
+import GPTreeSchedule from '../components/GPTreeSchedule.svelte';
+import Shell from '../layouts/Shell.astro';
+---
+
+<Shell
+  frontmatter={{
+    title: 'Global GP Trees',
+    description: `Schedule for Gold/Rainbow GP Trees`,
+  }}
+>
+  <div class="my-12 max-w-2xl mx-auto px-4">
+    <div class="text-center font-light my-12">
+      <h1 class="font-bold text-4xl mb-2">PSO2:NGS Global GP Trees</h1>
+      <p>Schedule for Gold/Rainbow GP Trees</p>
+    </div>
+    <GPTreeSchedule client:load />
+
+    <div class="mt-32 text-sm">
+      <h2 class="text-xl font-semibold mb-2">references</h2>
+      <a href="https://twitter.com/TheuberClips" class="link">@TheuberClips</a
+      >'s
+      <a
+        href="https://docs.google.com/spreadsheets/d/1mor2OxARmVBDHsi1CbCaCExg6ItoUc7dKyCSGjyX-3Q/edit?usp=sharing"
+        class="link">Global GP Tree Schedule Spreadsheet</a
+      >
+      <hr class="opacity-25 my-4">
+      <a href="/" class="link-hover">back to arks.moe</a>
+    </div>
+  </div>
+</Shell>

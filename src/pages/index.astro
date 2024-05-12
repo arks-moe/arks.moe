@@ -1,7 +1,7 @@
 ---
-import Shell from "../layouts/Shell.astro";
-import { links } from "../data";
-import type { Link } from "../data";
+import Shell from '../layouts/Shell.astro';
+import { links } from '../data';
+import type { Link } from '../data';
 ---
 
 <style lang="scss">
@@ -12,11 +12,11 @@ import type { Link } from "../data";
 
 <Shell
   frontmatter={{
-    title: "arks.moe",
+    title: 'arks.moe',
     description: `a collection of resources for PSO2:NGS. not affiliated with SEGA.`,
   }}
 >
-  <div class="my-12 max-w-2xl mx-auto">
+  <div class="my-12 max-w-2xl mx-auto px-4">
     <div class="text-center font-light my-12">
       <h1 class="font-black text-6xl mb-6">arks.moe</h1>
       <p>a collection of resources for PSO2:NGS</p>
@@ -25,13 +25,13 @@ import type { Link } from "../data";
     </div>
     <ul class="flex flex-col gap-8 max-w-2xl mx-auto mb-12">
       {
-        links.map((category) => (
+        links.map(category => (
           <li>
             <h3 class="font-bold text-2xl mb-4">{category.header}</h3>
             <ul class="flex flex-col gap-4">
-              {category.links.map((link) => (
+              {category.links.map(link => (
                 <li class="bg-neutral hover:bg-neutral-focus text-neutral-content transition-all duration-100 hover:scale-[99%]">
-                  <a class="block p-4" href={link.url} target="_blank">
+                  <a class="block p-4" href={link.url} target={link.target}>
                     <div class="">{link.label}</div>
                     <div class="text-sm font-extralight">{link.sub}</div>
                   </a>
@@ -52,17 +52,17 @@ import type { Link } from "../data";
           (
             [
               {
-                label: "NGS Lore Timeline",
-                sub: "by @RollChroll",
-                url: "/ngs-timeline",
+                label: 'NGS Lore Timeline',
+                sub: 'by @RollChroll',
+                url: '/ngs-timeline',
               },
-							{
-								label: 'PSO2 Hashtag Guide',
-								sub: 'PSO2 Twitter Hashtag Reference',
-								url: '/hashtag-guide'
-							}
+              {
+                label: 'PSO2 Hashtag Guide',
+                sub: 'PSO2 Twitter Hashtag Reference',
+                url: '/hashtag-guide',
+              },
             ] as Link[]
-          ).map((link) => (
+          ).map(link => (
             <li class="bg-neutral hover:bg-neutral-focus text-neutral-content transition-all duration-100 hover:scale-[99%]">
               <a class="block p-4" href={link.url}>
                 <div class="">{link.label}</div>
